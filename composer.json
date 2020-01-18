@@ -1,0 +1,9 @@
+{
+    "autoload": {
+        "psr-4": {
+            "ArapucaFramework\\": "vendor/arapucaFramework/",
+            "App\\": "app/",
+            "System\\": "system/",
+            "Branches\\": "branches/"}
+    }
+}
