@@ -19,16 +19,24 @@ class System{
         return $this->_url;
     }
     public function setController(){
-        $this->_controller = empty($this->_url['controller']) ? "index" ? $this->_url['controller'];
+        $this->_controller = empty($this->_url['controller']) ? "index" : $this->_url['controller'];
     }
     public function getController(){
         return $controller;
     }
     public function setAction(){
-        $this->_action = empty($this->_url['action']) ? "index" ? $this->_url['action'];
+        $this->_action = empty($this->_url['action']) ? "index" : $this->_url['action'];
     }
     public function getAction(){
         return $action;
+    }
+
+    public function run(){
+        $controller = 'App\\Controllers\\'. $this->_controller . 'Controller';
+        $action = $this->_action;
+        $instancia = new $controller();
+        $instancia->$action();
+
     }
 
 }

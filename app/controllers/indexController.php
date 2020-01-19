@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Controller
+namespace App\Controllers;
 
-class index{
+class IndexController{
     public function Index(){
-        echo "Olá Mundo"
+        echo "Olá Mundo";
     }
 }
